@@ -29,11 +29,11 @@ class Controller_Auth extends Controller_Design {
                 try {
                     $remember = ($this->request->post('remember')) ? TRUE : FALSE;
                     
-                    $user = Auth_ORM::instance()->login(
+                    $user = Auth::instance()->login(
                             $this->request->post('username'), $this->request->post('password'), $remember
                     );
-                    
-                    if (!empty($user)) {
+                   //var_dump($user);
+                    if ($user) {
                         $userData = DAO_User::getInstance()->findUserForCode(Auth::instance()->get_user());
                         if ($userData->has('roles', ORM::factory('role', array('name' => 'Discente')))) {
                             if (is_null($userData->person->student->id)) {
