@@ -1,0 +1,18 @@
+table thead th{
+    background-color: #007bff;
+}
+tbody tr{
+    background-color: #FFF;
+    cursor: pointer;
+} 
+
+tbody tr:hover{
+    background-color: #ccd6cc;
+}
+
+.active{
+    background-color: #ffff99;
+}
+.colorGray{
+    background-color: #CCC;
+}
