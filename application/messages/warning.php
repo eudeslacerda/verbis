@@ -37,5 +37,8 @@ return array(
     'role' => array(
         'deleteNotice' => 'Você realmente deseja REMOVER este perfil?'
     ),
+    'institution' => array(
+        'deleteNotice' => 'Você realmente deseja REMOVER esta institução?'
+    ),
 );
 

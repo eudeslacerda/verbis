@@ -42,4 +42,9 @@ return array(
         'update' => 'Perfil atualizado com sucesso!',
         'delete' => 'Perfil removido com sucesso!'
     ),
+    'institution' => array(
+        'save' => 'Instituição salva com sucesso!',
+        'update' => 'Instituição atualizada com sucesso!',
+        'delete' => 'Instituição removida com sucesso!'
+    ),
 );

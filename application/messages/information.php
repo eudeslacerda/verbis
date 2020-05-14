@@ -22,5 +22,8 @@ return array(
     'correction' => array(
         'notFound' => "Nenhuma correção encontrado!"
     ),
+    'institution' => array(
+        'infoNotFoundMessege' => "Nenhum instituição encontrado!"
+    )
 );
 

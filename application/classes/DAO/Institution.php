@@ -86,10 +86,11 @@ class DAO_Institution {
     /**
      * Método apaga o registro
      * @param int $code
+     * @return boolean
      */
     public function delete($code) {
         try {
-            $key = ORM::factory('institution', $code)->delete();
+            return ORM::factory('Institution', $code)->delete()->id;
         } catch (Exception $e) {
             echo $e->getMessage();
         }
@@ -104,6 +105,19 @@ class DAO_Institution {
         try {
             $key = ORM::factory('Institution', $code)->find();
             return $this->fillKey($key);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+    
+    /**
+     * Método encontra um registro através de um código
+     * @param int $code
+     * @return ORM
+     */
+    public function findInstitutionForCode($code) {
+        try {
+            return ORM::factory('Institution', $code);
         } catch (Exception $e) {
             echo $e->getMessage();
         }
@@ -133,6 +147,30 @@ class DAO_Institution {
         $pojo->setInstitution($key->institution);
         
         return $pojo;
+    }
+    
+    /**
+     * Método conta o itens da lista de registro.
+     * @param ORM $list Lista de registro.
+     * @return Pagination.
+     */
+    public function pagination($list){
+        return Pagination::factory(array(
+            'total_items' => $list->count(),
+            'items_per_page' => 5
+        ));
+    }
+    
+    /**
+     * Método retorna a lista Pagination
+     * @param Pagination $pagination Objeto Pagination
+     * @return ORM Objeto ORM
+     */
+    public function paginationList($pagination) {
+        return ORM::factory('Institution')
+        ->limit($pagination->items_per_page)
+        ->offset($pagination->offset)
+        ->find_all();
     }
 
 }
