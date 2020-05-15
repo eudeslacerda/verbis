@@ -32,7 +32,7 @@
                 ?>
                 <tr onclick="setSelectedLine('#list',<?= $item->id ?>, ['#btnDelete','#btnView']);">
                     <th scope="row"><?= $item->id ?></th>
-                    <td><a href="<?= URL::site('wordings') . '/' . $item->url ?>" target="__blank"><?= HTML::image('media/images/icons/if_pdf_3745.png', array('width'=>24,'height'=>24))?></a></td>
+                    <td><a href="<?= URL::site('storage/wordings') . '/' . $item->url ?>" target="__blank"><?= HTML::image('storage/media/images/icons/if_pdf_3745.png', array('width'=>24,'height'=>24))?></a></td>
                     <td><?= Date::formatted_time($item->insertdate, "d/m/Y") ?></td>
                     <td><?= $item->theme->theme ?></td>
                     <td><?= ($item->iscorrected)? Kohana::message('button', 'yes') : Kohana::message('button', 'no') ?></td>

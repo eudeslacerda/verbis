@@ -25,7 +25,7 @@
             <?= $wording->secret->value ?>
         </div>
         <div class="mb-3">
-            <embed src="<?= URL::site('wordings') . "/" . $wording->url ?>" width="800" height="300"> 
+            <embed src="<?= URL::site('storage/wordings') . "/" . $wording->url ?>" width="800" height="300"> 
         </div>
         <div class="mb-3">
             <label for="txtNote"><?= Kohana::message('correction', 'note') ?></label>

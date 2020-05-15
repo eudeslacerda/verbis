@@ -66,7 +66,7 @@ class Controller_Wording extends Controller_Design {
                                 $fileTmpName = $_FILES['flWording']['tmp_name'];
 
                                 $currentDir = getcwd();
-                                $uploadDirectory = DIRECTORY_SEPARATOR . "wordings" . DIRECTORY_SEPARATOR;
+                                $uploadDirectory = DIRECTORY_SEPARATOR . "storage/wordings" . DIRECTORY_SEPARATOR;
 
                                 $fileName = Date::formatted_time('now', "d_m_Y") . "_" . str_replace(" ", "_", $daouser->findUserForCode(Auth::instance()->get_user())->person->name);
 
@@ -130,7 +130,7 @@ class Controller_Wording extends Controller_Design {
         $wording = $daowording->findForCode($this->request->param('id'));
 
         $currentDir = getcwd();
-        $uploadDirectory = DIRECTORY_SEPARATOR . "wordings" . DIRECTORY_SEPARATOR;
+        $uploadDirectory = DIRECTORY_SEPARATOR . "storage/wordings" . DIRECTORY_SEPARATOR;
 
         if (unlink($currentDir . $uploadDirectory . $wording->getUrl())) {
             if (is_null($daowording->delete($wording->getCode()))) {

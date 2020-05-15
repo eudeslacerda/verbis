@@ -6,7 +6,7 @@ class Controller_Correction extends Controller_Design {
 
         POJO_Session::getInstance()->isLogged();
 
-        $this->addressStyles = array("media/css/sticky-footer-navbar.css", "media/css/style.css", "media/css/form-validation.css");
+        $this->addressStyles = array("storage/styles/css/sticky-footer-navbar.css", "storage/styles/css/style.css", "storage/styles/css/form-validation.css");
 
         $correctionDAO = DAO_Correction::getInstance();
 
@@ -20,7 +20,7 @@ class Controller_Correction extends Controller_Design {
     public function action_wordings() {
         POJO_Session::getInstance()->isLogged();
 
-        $this->addressStyles = array("media/css/sticky-footer-navbar.css", "media/css/style.css", "media/css/form-validation.css");
+        $this->addressStyles = array("storage/styles/css/sticky-footer-navbar.css", "storage/styles/css/style.css", "storage/styles/css/form-validation.css");
 
         $wordingDAO = DAO_Wording::getInstance();
 
@@ -34,7 +34,7 @@ class Controller_Correction extends Controller_Design {
     public function action_correct() {
         POJO_Session::getInstance()->isLogged();
 
-        $this->addressStyles = array("media/css/sticky-footer-navbar.css", "media/css/style.css", "media/css/form-validation.css");
+        $this->addressStyles = array("storage/styles/css/sticky-footer-navbar.css", "storage/styles/css/style.css", "storage/styles/css/form-validation.css");
 
         $correction = new POJO_Correction();
 
@@ -71,7 +71,7 @@ class Controller_Correction extends Controller_Design {
     public function action_update() {
         POJO_Session::getInstance()->isLogged();
 
-        $this->addressStyles = array("media/css/sticky-footer-navbar.css", "media/css/style.css", "media/css/form-validation.css");
+        $this->addressStyles = array("storage/styles/css/sticky-footer-navbar.css", "storage/styles/css/style.css", "storage/styles/css/form-validation.css");
 
         if (HTTP_Request::POST == $this->request->method()) {
 
@@ -101,7 +101,7 @@ class Controller_Correction extends Controller_Design {
     public function action_view() {
         POJO_Session::getInstance()->isLogged();
 
-        $this->addressStyles = array("media/css/sticky-footer-navbar.css", "media/css/style.css", "media/css/form-validation.css");
+        $this->addressStyles = array("storage/styles/css/sticky-footer-navbar.css", "storage/styles/css/style.css", "storage/styles/css/form-validation.css");
 
         $theme = new POJO_Theme();
 
@@ -114,7 +114,7 @@ class Controller_Correction extends Controller_Design {
     public function action_delete() {
         POJO_Session::getInstance()->isLogged();
         if (is_null(DAO_Theme::getInstance()->delete($this->request->param('id')))) {
-            $this->addressStyles = array("media/css/sticky-footer-navbar.css", "media/css/style.css", "media/css/form-validation.css");
+            $this->addressStyles = array("storage/styles/css/sticky-footer-navbar.css", "storage/styles/css/style.css", "storage/styles/css/form-validation.css");
             $this->alert('success', 'theme.themeSuccessDelete', 'success', 'theme');
         }
     }
