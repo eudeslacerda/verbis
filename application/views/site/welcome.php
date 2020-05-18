@@ -79,7 +79,7 @@ $correcoesTitulo = "10 Correções Mais Relevantes!";
                 <img class="rounded-circle" src="storage/media/images/acesso.jpg" alt="Generic placeholder image" width="140" height="140">
                 <h2>Acesso!</h2>
                 <p style="text-align: justify">
-                    É muito importante que como usuário do nosso site, você tenha uma conta e faça login para que
+                    E muito importante que como usuário do nosso site, você tenha uma conta e faça login para que
                     possa ter acesso a todas funcionalidades que te proporcionamos. Caso ainda não tenha criado uma
                     conta de usuário, click na opção abaixo e logo após em "Inscrever", para se cadastrar e desfrutar
                     de todos os recursos disponíveis e totalmente gratuitos.
