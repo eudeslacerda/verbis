@@ -10,7 +10,7 @@ return array(
     'iscorrected' => 'Corrigida',
     'isselected' => 'Selecionada',
     'date' => 'Data',
-    'correct' => 'Corrigir',
+    'correct' => 'A corrigir',
     'corrected' => 'Corrigidas',
     'broker' => 'Corretor'
 );
